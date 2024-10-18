@@ -32,8 +32,8 @@ Cross-platform access (mobile-friendly).
 
 
 
-
-
+**
+USER INTERFACE :**
 
 
 
@@ -53,7 +53,3 @@ Ready to explore? Sign in to unlock your city’s best-kept secrets and connect 
 Need assistance? We're here to help! Discover our range of services designed to enhance your city experience.
 
 
-![tourist](https://github.com/user-attachments/assets/49592c16-6282-4db2-88f7-103f2953fc36)
-
-
-Welcome, tourists! Uncover our city’s hidden gems, top attractions, and essential tips for a memorable urban adventure!
