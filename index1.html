@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Buddy</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="logo">UB</div>
+      <div class="title">URBAN BUDDY</div>
+    </header>
+    <div class="content">
+      <div class="overlay"></div>
+      <img src="Background.jpeg" alt="City Background" class="background-img">
+      <div class="text">
+        <h1>Thrive<br> In <br> Community</h1>
+      </div>
+      <div class="form-container">
+        <div class="form-header">
+          <button class="signup-btn active" id="signupBtn">SIGN UP</button>
+          <button class="login-btn" id="loginBtn">LOGIN</button>
+        </div>
+        <form class="form" id="signupForm">
+          <input type="email" placeholder="Email" required>
+          <input type="text" placeholder="Full Name" required>
+          <input type="text" placeholder="State" required>
+          <input type="text" placeholder="City" required>
+          <button type="submit" class="signin-btn">SIGN IN</button>
+        </form>
+
+        <form class="form" id="loginForm" style="display: none;">
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit" class="signin-btn">LOG IN</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const signupBtn = document.getElementById('signupBtn');
+  const loginBtn = document.getElementById('loginBtn');
+  const signupForm = document.getElementById('signupForm');
+  const loginForm = document.getElementById('loginForm');
+
+  // Event listener for Sign Up button
+  signupBtn.addEventListener('click', function() {
+    signupForm.style.display = 'block';  // Show Sign Up form
+    loginForm.style.display = 'none';    // Hide Sign In form
+    signupBtn.classList.add('active');   // Highlight Sign Up button
+    loginBtn.classList.remove('active'); // Remove highlight from Login button
+  });
+
+  // Event listener for Login button
+  loginBtn.addEventListener('click', function() {
+    signupForm.style.display = 'none';   // Hide Sign Up form
+    loginForm.style.display = 'block';   // Show Sign In form
+    loginBtn.classList.add('active');    // Highlight Login button
+    signupBtn.classList.remove('active'); // Remove highlight from Sign Up button
+  });
+
+  signupForm.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent default form submission
+    // Handle Sign Up logic here (validation, sending data to server, etc.)
+    
+    // Redirect to index2.html after successful Sign Up
+    window.location.href = 'index2.html';
+  });
+
+  // Handle Login form submission
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent default form submission
+    // Handle Login logic here (validation, sending data to server, etc.)
+
+    // Redirect to index2.html after successful Login
+    window.location.href = 'index2.html';
+  });
+});
+
+  </script>
+  
+</body>
+</html>
